@@ -1,6 +1,9 @@
+import Navbar from "../components/Navbar";
 const Analytics = () => {
-  return (
-    <h1>Analytics</h1>
-  )
-}
-export default Analytics
+    return (
+        <>
+            <Navbar />
+        </>
+    );
+};
+export default Analytics;

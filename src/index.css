@@ -1,0 +1,67 @@
+:root {
+    --clr-blue: #00bcd5;
+    --clr-yellow: #fdc006;
+    --clr-black: #3b3636;
+    --clr-grey: #748b97;
+    --clr-white: #ffffff;
+    --font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    --transition: all 0.3s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-family);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    padding: 1rem;
+}
+
+.nav__list {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.nav__link {
+    color: var(--clr-black);
+    transition: var(--transition);
+}
+
+.nav__link:hover {
+    color: #000;
+}
+
+.active {
+    text-decoration: underline;
+}
