@@ -38,7 +38,9 @@ a {
 }
 
 .nav {
-    padding: 1rem;
+    padding: 1rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .nav__list {
@@ -69,8 +71,8 @@ a {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -281,9 +283,6 @@ a {
 .analytics {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
 }
 
 .analytics__heading {
@@ -317,9 +316,6 @@ tbody tr:hover {
     background-color: #eee;
 }
 
-.analytics__post-title {
-    text-align: left;
-}
 
 .loader {
   display: flex;
@@ -392,7 +388,7 @@ tbody tr:hover {
 }
 
 @media (max-width: 1200px) {
-    .posts {
+    .nav, .posts, .analytics {
         width: 90%;
         margin: 0 auto;
     }
@@ -425,4 +421,3 @@ tbody tr:hover {
         gap: 0.5rem;
     }
 }
-
