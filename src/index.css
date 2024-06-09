@@ -278,6 +278,50 @@ a {
     border-radius: 50%;
 }
 
+.analytics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.analytics__heading {
+    font-size: 1.5rem;
+    color: var(--clr-black);
+    padding-bottom: 2rem;
+}
+
+.analytics__table {
+    border-collapse: collapse;
+}
+
+th {
+    color: var(--clr-black);
+    font-size: 1.15rem;
+}
+
+th,
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+tbody tr {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+tbody tr:hover {
+    background-color: #eee;
+}
+
+.analytics__post-title {
+    text-align: left;
+}
+
+
 @keyframes zoomIn {
     from {
         transform: scale(0);
