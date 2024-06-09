@@ -65,3 +65,125 @@ a {
 .active {
     text-decoration: underline;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 54px);
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.post {
+    border-radius: 0.5rem;
+    background-color: var(--clr-white);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.post:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.post__img {
+    position: relative;
+}
+
+.post__img img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.post__img-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.post:hover .post__img-overlay {
+    display: flex;
+    opacity: 1;
+}
+
+.post__btn {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: var(--clr-white);
+    cursor: pointer;
+}
+
+.post__content {
+    padding: 2rem;
+}
+
+.post__bullets {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.post__bullet {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.post__bullet-blue {
+    background-color: var(--clr-blue);
+}
+
+.post__bullet-yellow {
+    background-color: var(--clr-yellow);
+}
+
+.post__text {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.post__title {
+    color: var(--clr-black);
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding-top: 1rem;
+}
+
+.post__description {
+    color: var(--clr-grey);
+    line-height: 1.3;
+}
+
+.post__attribution {
+    display: flex;
+    justify-content: space-between;
+    color: var(--clr-grey);
+}
