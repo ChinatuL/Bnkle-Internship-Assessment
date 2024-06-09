@@ -2,6 +2,7 @@ import { usePostAnalytics } from "../hooks/usePostAnalytics";
 import { useAppContext } from "../context/appContext";
 import { Post } from "../lib/definitions";
 import Navbar from "../components/Navbar";
+import Loader from "../components/Loader";
 
 const Analytics = () => {
 
@@ -12,7 +13,7 @@ const Analytics = () => {
   });
 
   if (isLoading) {
-      return <div>Loading...</div>;
+      return <Loader />;
   }
     return (
         <>
