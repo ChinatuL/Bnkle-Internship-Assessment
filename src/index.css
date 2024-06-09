@@ -187,3 +187,38 @@ a {
     justify-content: space-between;
     color: var(--clr-grey);
 }
+
+@media (max-width: 1200px) {
+    .posts {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .posts {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        justify-content: flex-start;
+    }
+
+    .post__title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .post__title {
+        font-size: 1.3rem;
+    }
+    
+    .post__attribution {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+    }
+}
