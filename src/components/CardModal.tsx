@@ -1,13 +1,11 @@
-import { Post } from "../lib/definitions";
+import { useAppContext } from "../context/appContext";
 
-type ModalProps = {
-    modalContent: Post;
-    closeModal: () => void;
-    isModalOpen: boolean;
-};
-
-const CardModal = ({ modalContent, closeModal, isModalOpen }: ModalProps) => {
-    const { title, content, thumbnail, author } = modalContent;
+const CardModal = () => {
+    const { post, closeModal, isModalOpen } = useAppContext();
+    if (!post) {
+        return;
+    }
+    const { title, content, thumbnail, author } = post;
     const { small } = thumbnail;
     const { avatar, name, role } = author;
 
