@@ -7,3 +7,5 @@ export type Post = {
     author: { avatar: string; name: string; role: string };
     clicks: 0;
 };
+
+export type ClicksRecord = Record<string, number>; // object with properties as string and values as number
