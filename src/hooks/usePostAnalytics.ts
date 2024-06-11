@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import type { ClicksRecord } from "../lib/definitions";
-import { getAnalyticsFromStorage, storeAnalytics } from "../lib/utils";
+import type { ClicksRecord } from "@lib/definitions";
+import { getAnalyticsFromStorage, storeAnalytics } from "@lib/utils";
 
 
 export const usePostAnalytics = (): [
