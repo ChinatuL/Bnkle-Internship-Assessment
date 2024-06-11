@@ -1,8 +1,8 @@
 import { useAppContext } from "../context/appContext";
-import Navbar from "../components/Navbar";
-import Cards from "../components/Cards";
-import CardModal from "../components/CardModal";
-import Loader from "../components/Loader";
+import Navbar from "@components/Navbar";
+import Cards from "@components/Cards";
+import CardModal from "@components/CardModal";
+import Loader from "@components/Loader";
 import Error from "./Error";
 
 const Home = () => {
@@ -12,9 +12,9 @@ const Home = () => {
         return <Loader />;
     }
 
-  if (error) { 
+    if (error) {
         return <Error />;
-  }
+    }
 
     return (
         <>

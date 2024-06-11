@@ -1,5 +1,5 @@
-import { Post } from "../lib/definitions";
-import { formatDate } from "../lib/utils";
+import { Post } from "@lib/definitions";
+import { formatDate } from "@lib/utils";
 
 type CardProps = {
     post: Post;

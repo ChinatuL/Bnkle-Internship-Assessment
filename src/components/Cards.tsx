@@ -1,6 +1,6 @@
 import Card from "./Card";
-import { useAppContext } from "../context/appContext";
-import type { Post as PostData } from "../lib/definitions";
+import { useAppContext } from "@context/appContext";
+import type { Post as PostData } from "@lib/definitions";
 
 
 const Cards = () => {

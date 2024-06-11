@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { AppContext } from "./appContext";
-import { disableScroll, enableScroll } from "../lib/utils";
-import { Post } from "../lib/definitions";
-import { usePostAnalytics } from "../hooks/usePostAnalytics";
+import { disableScroll, enableScroll } from "@lib/utils";
+import { Post } from "@lib/definitions";
+import { usePostAnalytics } from "@hooks/usePostAnalytics";
 
 const API_URL =
     "https://my-json-server.typicode.com/Codeinwp/front-end-internship-api/posts";

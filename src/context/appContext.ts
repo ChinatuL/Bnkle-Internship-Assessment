@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { Post } from "../lib/definitions";
+import { Post } from "@lib/definitions";
 
 type ContextType = {
     posts: Post[];

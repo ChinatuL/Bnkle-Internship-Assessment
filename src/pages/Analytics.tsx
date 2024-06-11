@@ -1,8 +1,8 @@
-import { usePostAnalytics } from "../hooks/usePostAnalytics";
-import { useAppContext } from "../context/appContext";
-import { Post } from "../lib/definitions";
-import Navbar from "../components/Navbar";
-import Loader from "../components/Loader";
+import { usePostAnalytics } from "@hooks/usePostAnalytics";
+import { useAppContext } from "@context/appContext";
+import { Post } from "@lib/definitions";
+import Navbar from "@components/Navbar";
+import Loader from "@components/Loader";
 
 const Analytics = () => {
 
