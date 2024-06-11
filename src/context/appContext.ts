@@ -4,6 +4,7 @@ import { Post } from "../lib/definitions";
 type ContextType = {
     posts: Post[];
     isLoading: boolean;
+    error: boolean;
     isModalOpen: boolean;
     post: Post | null;
     openModal: (id: number) => void;

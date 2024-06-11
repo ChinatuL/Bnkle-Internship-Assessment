@@ -3,13 +3,18 @@ import Navbar from "../components/Navbar";
 import Cards from "../components/Cards";
 import CardModal from "../components/CardModal";
 import Loader from "../components/Loader";
+import Error from "./Error";
 
 const Home = () => {
-    const { isLoading, isModalOpen } = useAppContext();
+    const { isLoading, error, isModalOpen } = useAppContext();
 
     if (isLoading) {
         return <Loader />;
     }
+
+  if (error) { 
+        return <Error />;
+  }
 
     return (
         <>

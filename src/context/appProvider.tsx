@@ -10,6 +10,7 @@ const API_URL =
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     const [posts, setPosts] = useState<Post[]>([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [post, setPost] = useState<Post | null>(null);
     const [analytics, updateAnalytics] = usePostAnalytics();
@@ -33,11 +34,16 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
     const fetchPosts = async () => {
         try {
             const response = await fetch(API_URL);
+            if (!response.ok) {
+                setError(true);
+                setIsLoading(false);
+            }
             const posts = await response.json();
             setPosts(posts);
             setIsLoading(false);
         } catch (error) {
             console.error(error);
+            setError(true);
             setIsLoading(false);
         }
     };
@@ -51,6 +57,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
             value={{
                 posts,
                 isLoading,
+                error,
                 isModalOpen,
                 post,
                 openModal,

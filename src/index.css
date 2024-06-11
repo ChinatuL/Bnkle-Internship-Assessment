@@ -316,25 +316,26 @@ tbody tr:hover {
     background-color: #eee;
 }
 
-
 .loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .ripple,
 .ripple div {
     box-sizing: border-box;
 }
+
 .ripple {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
 }
+
 .ripple div {
     position: absolute;
     border: 4px solid currentColor;
@@ -342,9 +343,49 @@ tbody tr:hover {
     border-radius: 50%;
     animation: ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
+
 .ripple div:nth-child(2) {
     animation-delay: -0.5s;
 }
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.error__text {
+    text-align: center;
+}
+
+.error__text h1 {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    line-height: 1;
+}
+
+.error__text p {
+    font-size: 1.5rem;
+    padding: 0.5rem 0 1rem;
+}
+
+.error__text div {
+    width: 100%;
+}
+
+.error__text a {
+    display: block;
+    background-color: var(--clr-black);
+    padding: 0.8rem 0;
+    border-radius: 0.5rem;
+    color: var(--clr-white);
+    line-height: 1.5;
+}
+
 @keyframes ripple {
     0% {
         top: 36px;
@@ -388,7 +429,9 @@ tbody tr:hover {
 }
 
 @media (max-width: 1200px) {
-    .nav, .posts, .analytics {
+    .nav,
+    .posts,
+    .analytics {
         width: 90%;
         margin: 0 auto;
     }
@@ -414,7 +457,7 @@ tbody tr:hover {
     .post__title {
         font-size: 1.3rem;
     }
-    
+
     .post__attribution {
         flex-direction: column;
         align-items: flex-end;
