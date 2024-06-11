@@ -11,7 +11,7 @@ const Card = ({ post, onClick }: CardProps) => {
     const { large } = thumbnail;
     const { name, role } = author;
     return (
-        <article className='post' onClick={() => onClick(id)}>
+        <article className='post' onClick={() => onClick(id)} data-testid={id}>
             <div className='post__img'>
                 <img src={large} alt='' />
                 <div className='post__img-overlay'>
