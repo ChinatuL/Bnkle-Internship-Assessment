@@ -105,8 +105,8 @@ export const usePostAnalytics = (): [ClicksRecord, (data: ClicksRecord) => void]
 ```
 
 ### Key Decisions
-- Vite: Chosen as scaffolding tool because of its faster build time and modern development features
-- Context API: Used for state management to provide an efficient way to pass data across components.
+- Vite: Chosen as scaffolding tool because of its faster build and development time and modern development features.
+- Context API: Used for state management to provide a way to pass data across components without installing a third-party state management library.
 - Custom Hook: Implemented for analytics to keep the logic separated and reusable, while leveraging local storage for data persistence.
 
 
